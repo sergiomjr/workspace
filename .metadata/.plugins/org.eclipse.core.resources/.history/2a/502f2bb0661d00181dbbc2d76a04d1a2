@@ -1,0 +1,79 @@
+
+
+public class Empresa {
+
+Funcionario [] empregados = new Funcionario[10];
+private  String nomeEmpresa;
+int cnpj;
+
+public void adicionaFuncionario(Funcionario f){
+ for (int i = 0; i < empregados.length; i++){
+	 if(this.empregados[i] == null){
+		 this.empregados[i] = f;
+		 break;
+	 }
+	 else{
+		 System.out.println("ARRAY CHEIA");
+	 }
+ }
+	
+}
+	
+boolean contem(Funcionario f){
+boolean possui = false;
+for(int i = 0;i< this.empregados.length; i++){
+	if(this.empregados[i] == f){
+		possui = true;
+	}
+}
+
+if(possui = true){
+	System.out.println("FUNCIONARIO SE ENCONTRA NA EMPRESA");
+	return true;
+}else{
+	System.out.println("FUNCIONARIO NÃO SE ENCONTRA NA EMPRESA");
+	return false;
+}
+	
+}
+
+public String getNomeEmpresa() {
+	return nomeEmpresa;
+}
+
+public void setNomeEmpresa(String nomeEmpresa) {
+	this.nomeEmpresa = nomeEmpresa;
+}
+
+public void setEmpregados(Funcionario[] empregados) {
+	this.empregados = empregados;
+}
+
+public Funcionario[] getFuncionarios(){
+	return empregados;
+}
+
+public int getCnpj() {
+	return cnpj;
+}
+
+public void setCnpj(int i) {
+	this.cnpj = i;
+}
+
+public String toString() {
+	System.out.println("NOME DA EMPRESA: " +  this.nomeEmpresa);
+	for (Funcionario f : this.empregados){
+		if(f == null)break;
+		System.out.println("NOME DO FUNCIONARIO : " + f.getNome());
+		System.out.println("SALARIO DO FUNCIONARIO : " + f.getSalario());
+		System.out.println("" + contem(f));
+	}
+	
+	return null;
+}
+
+
+
+
+}

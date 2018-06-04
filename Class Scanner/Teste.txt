@@ -1,0 +1,6 @@
+linha 1
+linha 2
+linha 3
+linha 4
+
+Hoje é dia 23/04/2018, moro em Araraquara, São Paulo 
